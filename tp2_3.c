@@ -46,6 +46,23 @@ void mostrarMasVieja(PC pcs[], int cantidad){
     printf("PC mas antigua \nVelocidad: %dGHz\tAnio Fabricacion: %d\tNucleos: %d\tCPU: %s\n" ,antigua.velocidad,antigua.anio,antigua.cantidad_nucleos,antigua.tipo_cpu);
 }
 
+void mostrarMasVeloz(struct compu pcs[], int cantidad){
+    int actual = 0;
+    PC masVeloz;
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].velocidad > actual)
+        {
+            masVeloz = pcs[i];
+            actual = pcs[i].velocidad;
+        }
+        
+    }
+    printf("PC mas veloz \nVelocidad: %dGHz\tAnio Fabricacion: %d\tNucleos: %d\tCPU: %s\n" ,masVeloz.velocidad,masVeloz.anio,masVeloz.cantidad_nucleos,masVeloz.tipo_cpu);
+}
+
+
+
 int main(){
     srand(time(NULL));
     for (int i = 0; i < CANT_COMPUS; i++)
@@ -61,4 +78,5 @@ int main(){
     }
     listarPCs(compus, CANT_COMPUS);
     mostrarMasVieja(compus, CANT_COMPUS);
+    mostrarMasVeloz(compus,CANT_COMPUS);
 }
