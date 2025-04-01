@@ -1,5 +1,8 @@
 ¿Puede ver el archivo tp2_1_2.c? ¿Por qué?
-El archivo tp2_1_2.c no se puede ver desde la rama main porque se creó en otra rama (opcion_2) y si bien está guardado en un commit de esta, la rama opcion_2 aun no ha sido mergeada a main
+El archivo tp2_1_2.c no se puede ver desde la rama main porque se creó en otra rama (opcion_2) y si bien está guardado en un commit de esta, la rama opcion_2 aun no ha sido mergeada a main.
 
 En VSCode vuelva al “Source Control” ¿Qué diferencias nota?
-Graficamente se desplegó una rama paralela a la principal, donde estan el commit reciente
+Graficamente se desplegó una rama paralela a la principal, donde estan el commit reciente.
+
+En VSCode vuelva al “Source Control” vea los cambios, ¿Qué nota?
+La grafica de la rama secundaria se unió a la principal, llevando todos sus commits.
