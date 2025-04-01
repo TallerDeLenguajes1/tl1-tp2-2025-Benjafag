@@ -31,7 +31,23 @@ void listarPCs(PC pcs[], int cantidad){
     
 }
 
+void mostrarMasVieja(PC pcs[], int cantidad){
+    int anio = 2025;
+    PC antigua;
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].anio < anio)
+        {
+            antigua = pcs[i];
+            anio = pcs[i].anio;
+        }
+        
+    }
+    printf("PC mas antigua \nVelocidad: %dGHz\tAnio Fabricacion: %d\tNucleos: %d\tCPU: %s\n" ,antigua.velocidad,antigua.anio,antigua.cantidad_nucleos,antigua.tipo_cpu);
+}
+
 int main(){
+    srand(time(NULL));
     for (int i = 0; i < CANT_COMPUS; i++)
     {
         PC aux = {
@@ -44,4 +60,5 @@ int main(){
         compus[i] = aux;
     }
     listarPCs(compus, CANT_COMPUS);
+    mostrarMasVieja(compus, CANT_COMPUS);
 }
